@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <a href="{{ url_for('views.task_list') }}">&#8592; Back</a>
+</div>
+
+  <div class="card-body">
+      <form action="" method="post">
+
+          <label>Title</label>
+          <input type="text" name="title" value="{{ task.title }}">
+
+          <label>Description</label>
+          <textarea rows="5" name="description">{{ task.description }}</textarea>
+
+          <label>Complete<input type="checkbox" name="complete" checked></label>
+
+          <input style="margin-top:10px;" class="button" type="submit" value="Submit">
+      </form>
+  </div>
+
+{% endblock %}
+
+
+
+

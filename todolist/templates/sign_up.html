@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <h1>Register</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+
+        <label>Firstname</label>
+        <input type="text" name="firstName">
+
+        <label>Email Address</label>
+        <input type="email" name="email">
+
+
+        <label>Password</label>
+        <input type="password" name="password1">
+
+        <label>Confirm Password</label>
+        <input type="password" name="password2">
+
+        <input style="margin-top:10px ;" class="button" type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="{{ url_for('auth.login') }}">Login</a></p>
+</div>
+
+{% endblock %}
